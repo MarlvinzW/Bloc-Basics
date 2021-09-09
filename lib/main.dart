@@ -1,4 +1,4 @@
-import 'package:bloc_app/screens/counter.dart';
+import 'package:bloc_app/screens/home.dart';
 import 'package:bloc_app/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -16,10 +16,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: Constants.appTitle,
-      home: Counter(),
+      home: Home(),
     );
   }
 }
-
-
-

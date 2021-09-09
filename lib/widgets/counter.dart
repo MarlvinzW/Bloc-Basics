@@ -10,9 +10,7 @@ import 'package:bloc_app/services/counterService.dart';
 import 'package:bloc_app/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:kiwi/kiwi.dart' as kiwi;
 
-// CounterService counterService = kiwi.KiwiContainer().resolve<CounterService>();
 
 class CounterButton extends StatelessWidget {
 
@@ -46,14 +44,14 @@ class CounterButton extends StatelessWidget {
   }
 }
 
-class CountText extends StatelessWidget {
-  final String count;
+class AppText extends StatelessWidget {
+  final String text;
 
-  const CountText({Key? key, required this.count}) : super(key: key);
+  const AppText({Key? key, required this.text}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Text(count, textAlign: TextAlign.center,
+    return Text(text, textAlign: TextAlign.center,
         style: TextStyle(color: Constants.appColor, fontSize: 30, fontWeight: FontWeight.bold));
   }
 }

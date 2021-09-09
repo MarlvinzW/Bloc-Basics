@@ -12,6 +12,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+
 class Counter extends StatefulWidget {
   const Counter({Key? key}) : super(key: key);
 
@@ -20,6 +21,7 @@ class Counter extends StatefulWidget {
 }
 
 class _CounterState extends State<Counter> {
+
   @override
   Widget build(BuildContext context) {
     final counterBloc = CounterBloc(0);
@@ -35,6 +37,9 @@ class _CounterState extends State<Counter> {
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.white),
               ),
+              leading: IconButton(
+                  icon: Icon(Icons.arrow_back_ios, color: Colors.white),
+                  onPressed: () => Get.back()),
               backgroundColor: Constants.appColor,
             ),
             body: BlocBuilder<CounterBloc, int>(
@@ -45,7 +50,7 @@ class _CounterState extends State<Counter> {
                     children: [
                       Padding(
                           padding: EdgeInsets.all(30),
-                          child: CountText(count: count.toString())),
+                          child: AppText(text: count.toString())),
                       Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
